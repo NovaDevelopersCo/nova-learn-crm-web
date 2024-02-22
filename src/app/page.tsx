@@ -1,11 +1,9 @@
-"use client"
-import Calendar from "@/Components-Calendar/Calendar"
+import Calendar from '@widgets/Calendar'
 
 export default function Home() {
 	return (
 		<div>
-			<Calendar/>
+			<Calendar />
 		</div>
 	)
-	
 }

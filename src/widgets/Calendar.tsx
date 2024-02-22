@@ -2,15 +2,14 @@ import React from 'react'
 
 import styles from './Calendar.module.scss'
 
+const TaskAndMeetList: React.FC = () => {
+	return (
+		<div className={styles.taskMeetList}>
+			{/* Здесь будут отображаться задачи и встречи */}
+		</div>
+	)
+}
 const Calendar: React.FC = () => {
-	const TaskAndMeetList: React.FC = () => {
-		return (
-			<div className={styles.taskMeetList}>
-				{/* Здесь будут отображаться задачи и встречи */}
-			</div>
-		)
-	}
-
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
