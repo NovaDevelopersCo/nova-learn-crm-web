@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Calendar.module.sass'
+import styles from './Calendar.module.scss'
 
 const Calendar: React.FC = () => {
 	const TaskAndMeetList: React.FC = () => {
