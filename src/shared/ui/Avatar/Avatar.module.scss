@@ -1,0 +1,27 @@
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_profile {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.user_profile h2 {
+    margin-top: 25px;
+    color: #83868a;
+    font-weight: 600;
+}
+
+.user_profile h3 {
+    margin-top: 15px;
+    font-weight: 450;
+}

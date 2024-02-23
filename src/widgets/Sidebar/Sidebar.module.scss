@@ -1,0 +1,22 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F8FA;
+    color: #ADB8CC;
+    width: 275px;
+    height: 961px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.avatar {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
