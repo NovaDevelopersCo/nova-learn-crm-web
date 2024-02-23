@@ -1,22 +1,51 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    background-color: #F7F8FA;
-    color: #ADB8CC;
-    width: 275px;
-    height: 961px;
+	display: flex;
+	flex-direction: column;
+	background-color: #f7f8fa;
+	color: #adb8cc;
+	width: 310px;
+	height: 961px;
 }
 
 .button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px;
+}
+
+.customButton {
+	background-color: #f7f8fa;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	align-items: center;
 }
 
 .avatar {
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.clusterbtn {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-items: center;
+	margin-top: 75px;
+}
+
+.customcluster {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	width: 120px;
+	height: 120px;
+	background-color: #f7f8fa;
+	border: solid;
+	border-radius: 5px;
+	align-items: center;
 }
