@@ -1,40 +1,54 @@
-import React from 'react'
+'use client'
 
-import styles from './Calendar.module.scss'
+import React, { useEffect, useState } from 'react'
 
-const TaskAndMeetList: React.FC = () => {
-	return (
-		<div className={styles.taskMeetList}>
-			{/* Здесь будут отображаться задачи и встречи */}
-		</div>
-	)
-}
+// Путь к утилите для форматирования даты
+import { useRouter } from 'next/router'
+import { formatDate } from '../utils/dateUtils'
+
 const Calendar: React.FC = () => {
+	const router = useRouter()
+	const [selectedDate, setSelectedDate] = useState(new Date())
+
+	useEffect(() => {
+		// Парсим параметры из URL, если они есть
+		const { date } = router.query
+		if (date) {
+			const parsedDate = new Date(date as string)
+			if (!isNaN(parsedDate.getTime())) {
+				setSelectedDate(parsedDate)
+			}
+		}
+	}, [router.query])
+
+	const handlePrevWeek = () => {
+		const prevWeek = new Date(selectedDate)
+		prevWeek.setDate(prevWeek.getDate() - 7)
+		setSelectedDate(prevWeek)
+		router.push(`/?date=${formatDate(prevWeek)}`)
+	}
+
+	const handleNextWeek = () => {
+		const nextWeek = new Date(selectedDate)
+		nextWeek.setDate(nextWeek.getDate() + 7)
+		setSelectedDate(nextWeek)
+		router.push(`/?date=${formatDate(nextWeek)}`)
+	}
+
+	const handleToday = () => {
+		setSelectedDate(new Date())
+		router.push(`/?date=${formatDate(new Date())}`)
+	}
+
 	return (
-		<div className={styles.container}>
-			<header className={styles.header}>
-				<div>Today</div>
-				<div>{new Date().toLocaleDateString()}</div>
-				<div>
-					<select className={styles.select}>
-						<option>Week</option>
-						<option>Month</option>
-						<option>Year</option>
-					</select>
-				</div>
-			</header>
-			<div className={styles.days}>
-				<div>Monday</div>
-				<div>Tuesday</div>
-				<div>Wednesday</div>
-				<div>Thursday</div>
-				<div>Friday</div>
-				<div>Saturday</div>
-				<div>Sunday</div>
+		<div>
+			<div>
+				<button onClick={handleToday}>Today</button>
+				<button onClick={handlePrevWeek}>Previous Week</button>
+				<button onClick={handleNextWeek}>Next Week</button>
 			</div>
-			<main>
-				<TaskAndMeetList />
-			</main>
+			<div>{formatDate(selectedDate)}</div>
+			{/* Здесь ваша логика для отображения календаря */}
 		</div>
 	)
 }
