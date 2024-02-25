@@ -1,17 +1,19 @@
-import React from 'react'
+import { FC, HTMLAttributes } from 'react'
+
+import clsx from 'clsx'
+import Image from 'next/image'
 
 import style from './Button.module.scss'
 
-interface ButtonProps {
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	icon?: string
 	label?: string
-	className?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ icon, label, className }) => {
+const Button: FC<ButtonProps> = ({ icon, label, className, ...props }) => {
 	return (
-		<button className={`${style.Button} ${className}`}>
-			{icon && <img src={icon} alt='icon' />}
+		<button className={clsx(style.Button, className)} {...props}>
+			{icon && <Image src={icon} alt='icon' />}
 			{label && <span>{label}</span>}
 		</button>
 	)

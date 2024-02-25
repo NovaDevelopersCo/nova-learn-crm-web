@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { Avatar, Button } from '@shared/ui'
 
@@ -14,7 +14,7 @@ import people from '/public/icons/people.png'
 import settings from '/public/icons/settings.png'
 import teams from '/public/icons/teams.png'
 
-const Sidebar = () => {
+const Sidebar: FC = () => {
 	return (
 		<div className={style.sidebar}>
 			<div className={style.button}>
