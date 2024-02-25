@@ -1,19 +1,18 @@
 import React from 'react'
 
-import dot from '/public/icons/dot.png'
-import people from '/public/icons/people.png'
-import calendars from '/public/icons/calendars.png'
-import dash from '/public/icons/dash.png'
-import invoice from '/public/icons/invoice.png'
-import files from '/public/icons/files.png'
-import events from '/public/icons/events.png'
-import teams from '/public/icons/teams.png'
-import massage from '/public/icons/massage.png'
-import settings from '/public/icons/settings.png'
-
 import { Avatar, Button } from '@shared/ui'
 
 import style from './Sidebar.module.scss'
+import calendars from '/public/icons/calendars.png'
+import dash from '/public/icons/dash.png'
+import dot from '/public/icons/dot.png'
+import events from '/public/icons/events.png'
+import files from '/public/icons/files.png'
+import invoice from '/public/icons/invoice.png'
+import massage from '/public/icons/massage.png'
+import people from '/public/icons/people.png'
+import settings from '/public/icons/settings.png'
+import teams from '/public/icons/teams.png'
 
 const Sidebar = () => {
 	return (
