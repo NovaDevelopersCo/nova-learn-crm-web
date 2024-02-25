@@ -14,12 +14,22 @@
 	margin: 10px;
 }
 
+.button :hover {
+	background-color: #e6e6e6;
+	border-radius: 5px;
+}
+
 .customButton {
 	background-color: #f7f8fa;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 	align-items: center;
+}
+
+.customButton :hover {
+	background-color: #e6e6e6;
+	border-radius: 0;
 }
 
 .avatar {
@@ -38,14 +48,29 @@
 	margin-top: 75px;
 }
 
+.clusterbtn :hover {
+	border-radius: 12px;
+	background-color: #FFFFFF;
+	transform: scale(1.3);
+    position: relative;
+    z-index: 1;
+}
+
 .customcluster {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	box-sizing: border-box;
 	width: 120px;
 	height: 120px;
 	background-color: #f7f8fa;
-	border: solid;
-	border-radius: 5px;
-	align-items: center;
+	border: 2px solid;
+	border-color: #EDEFF2;
+	transition: all 0.2s ease;
+}
+
+.customcluster :hover {
+	border-radius: 0;
+	background-color: #FFFFFF;
+	transform: none;
 }
