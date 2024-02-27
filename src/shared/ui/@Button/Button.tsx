@@ -11,12 +11,18 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	rightIcon?: string
 }
 
-const Button: FC<ButtonProps> = ({ icon, label, className, rightIcon, ...props }) => {
+const Button: FC<ButtonProps> = ({
+	icon,
+	label,
+	className,
+	rightIcon,
+	...props
+}) => {
 	return (
 		<button className={clsx(style.Button, className)} {...props}>
 			{icon && <Image src={icon} alt='icon' />}
 			{label && <span>{label}</span>}
-			{rightIcon && <img src={rightIcon} alt='rightIcon' />}
+			{rightIcon && <Image src={rightIcon} alt='rightIcon' />}
 		</button>
 	)
 }
