@@ -3,19 +3,19 @@ import React from 'react'
 import { Avatar, Button } from '@shared/ui'
 
 import style from './Sidebar.module.scss'
-import calendars from '/public/icons/calendars.png'
 import Dashboard from '/public/icons/Dashboard.svg'
+import calendars from '/public/icons/calendars.png'
 import dot from '/public/icons/dot.png'
 import events from '/public/icons/events.png'
+import feedback from '/public/icons/feedback.png'
 import files from '/public/icons/files.png'
 import invoice from '/public/icons/invoice.png'
+import knowledge from '/public/icons/knowledge.png'
 import massage from '/public/icons/massage.png'
 import people from '/public/icons/people.png'
+import rightIcon from '/public/icons/rightIcon.png'
 import settings from '/public/icons/settings.png'
 import teams from '/public/icons/teams.png'
-import feedback from '/public/icons/feedback.png'
-import knowledge from '/public/icons/knowledge.png'
-import rightIcon from '/public/icons/rightIcon.png'
 
 const Sidebar = () => {
 	return (
@@ -76,7 +76,7 @@ const Sidebar = () => {
 					className={style.twobtn}
 					rightIcon={rightIcon.src}
 				/>
-				<Button 
+				<Button
 					icon={knowledge.src}
 					label='Knowledge Base'
 					className={style.twobtn}

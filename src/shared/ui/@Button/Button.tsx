@@ -9,12 +9,17 @@ interface ButtonProps {
 	rightIcon?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ icon, label, className, rightIcon }) => {
+const Button: React.FC<ButtonProps> = ({
+	icon,
+	label,
+	className,
+	rightIcon
+}) => {
 	return (
 		<button className={`${style.Button} ${className}`}>
 			{icon && <img src={icon} alt='icon' />}
 			{label && <span>{label}</span>}
-			{rightIcon && <img src={rightIcon} alt='rightIcon'/>}
+			{rightIcon && <img src={rightIcon} alt='rightIcon' />}
 		</button>
 	)
 }
