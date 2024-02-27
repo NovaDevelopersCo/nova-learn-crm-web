@@ -20,9 +20,11 @@ const Button: FC<ButtonProps> = ({
 }) => {
 	return (
 		<button className={clsx(style.Button, className)} {...props}>
-			{icon && <Image src={icon} alt='icon' />}
+			{icon && <Image src={icon} width={18} height={18} alt='icon' />}
 			{label && <span>{label}</span>}
-			{rightIcon && <Image src={rightIcon} alt='rightIcon' />}
+			{rightIcon && (
+				<Image src={rightIcon} width={15} height={15} alt='rightIcon' />
+			)}
 		</button>
 	)
 }

@@ -3,8 +3,8 @@ import React, { FC } from 'react'
 import { Avatar, Button } from '@shared/ui'
 
 import style from './Sidebar.module.scss'
-import Dashboard from '/public/icons/Dashboard.svg'
 import calendars from '/public/icons/calendars.png'
+import dash from '/public/icons/dash.png'
 import dot from '/public/icons/dot.png'
 import events from '/public/icons/events.png'
 import feedback from '/public/icons/feedback.png'
@@ -29,7 +29,7 @@ const Sidebar: FC = () => {
 			</div>
 			<div className={style.clusterbtn}>
 				<Button
-					icon={Dashboard.src}
+					icon={dash.src}
 					label='Dashboard'
 					className={style.customcluster}
 				/>
