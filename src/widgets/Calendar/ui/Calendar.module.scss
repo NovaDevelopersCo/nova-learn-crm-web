@@ -1,47 +1,47 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 20px;
-        background-color: #f0f0f0;
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 20px;
+		background-color: #f0f0f0;
 
-        .select {
-            padding: 5px;
-        }
-    }
+		.select {
+			padding: 5px;
+		}
+	}
 
-    .days {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        background-color: #f0f0f0;
-        line-height: 50px;
+	.days {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		background-color: #f0f0f0;
+		line-height: 50px;
 
-        .dayCell {
-            cursor: pointer; // Добавляем курсор при наведении для указания на возможность изменения
-        }
+		.dayCell {
+			cursor: pointer; // Добавляем курсор при наведении для указания на возможность изменения
+		}
 
-        .dayCell:hover {
-            border: 2px solid blue; // Изменяем рамку при наведении курсора
-        }
-    }
+		.dayCell:hover {
+			border: 2px solid blue; // Изменяем рамку при наведении курсора
+		}
+	}
 
-    .taskInput {
-        border: 1px solid black; // Устанавливаем стиль рамки для ввода задач
-        margin-bottom: 5px; // Добавляем отступ между вводом задач
-        padding: 5px; // Добавляем внутренний отступ для ввода задач
-    }
+	.taskInput {
+		border: 1px solid black; // Устанавливаем стиль рамки для ввода задач
+		margin-bottom: 5px; // Добавляем отступ между вводом задач
+		padding: 5px; // Добавляем внутренний отступ для ввода задач
+	}
 
-    .taskInput:focus {
-        outline: none; // Убираем фокусную обводку при активации поля ввода задач
-    }
+	.taskInput:focus {
+		outline: none; // Убираем фокусную обводку при активации поля ввода задач
+	}
 
-    .taskMeetList {
-        border: 0px;
-    }
+	.taskMeetList {
+		border: 0px;
+	}
 }
