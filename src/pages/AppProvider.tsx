@@ -6,4 +6,4 @@ const AppProvider: FC<PropsWithChildren<Record<string, never>>> = ({
 	children
 }) => <StoreProvider>{children}</StoreProvider>
 
-export default AppProvider
+export default AppProvider 
