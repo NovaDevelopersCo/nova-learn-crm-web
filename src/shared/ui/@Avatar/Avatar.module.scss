@@ -25,22 +25,29 @@
 	border-radius: 50%;
 }
 
+.levelBarContainer {
+	text-align: right;
+}
+
 .levelBar {
+	display: flex;
+	position: absolute;
 	height: 10px;
-	margin-top: 10px;
-	border-radius: 10px;
-	background-color: #00ff88;
+	border-radius: 50px;
+	margin-top: 5px;
+	right: 1px;
+	background-color: #0572d8;
 }
 
 .levelCircle {
 	position: absolute;
 	bottom: 0;
-	right: 20px;
+	right: -26px;
 	transform: translate(-50%, 50%);
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	background-color: #575757;
+	background-color: #0572d8;
 	display: flex;
 	justify-content: center;
 	align-items: center;

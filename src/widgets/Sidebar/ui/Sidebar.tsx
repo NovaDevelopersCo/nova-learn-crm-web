@@ -25,7 +25,7 @@ const Sidebar: FC = () => {
 				<Button icon={dot.src} className={style.customButton} />
 			</div>
 			<div className={style.avatar}>
-				<Avatar level={60} experience={50} />
+				<Avatar level={5} experience={100} />
 			</div>
 			<div className={style.clusterbtn}>
 				<Button

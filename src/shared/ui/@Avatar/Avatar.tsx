@@ -7,11 +7,10 @@ import Vector from '/public/assets/Vector.png'
 
 interface AvatarProps {
 	level: number
-	experience: number // Принимаем уровень с бэкэнда в качестве пропса
+	experience: number
 }
 
 const Avatar: React.FC<AvatarProps> = ({ level, experience }) => {
-	// Предполагаем, что level находится в диапазоне от 0 до 100
 	const formattedLevel = Math.min(Math.max(level, 0), 100)
 	const formattedExperience = Math.min(Math.max(experience, 0), 100)
 
@@ -27,10 +26,10 @@ const Avatar: React.FC<AvatarProps> = ({ level, experience }) => {
 						/>
 					</div>
 					<div className={style.levelBarContainer}>
-						<progress
+						<div
 							className={style.levelBar}
 							style={{ width: `${formattedExperience}%` }}
-						></progress>
+						></div>
 						<div className={style.levelCircle}>
 							{formattedLevel}
 						</div>
