@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+'use client'
+
+import React, { FC, useEffect } from 'react'
 
 import { Avatar, Button } from '@shared/ui'
 
@@ -18,6 +20,26 @@ import settings from '/public/icons/settings.png'
 import teams from '/public/icons/teams.png'
 
 const Sidebar: FC = () => {
+	useEffect(() => {
+		const setSidebarWidth = () => {
+			const sidebar = document.querySelector<HTMLElement>(
+				`.${style.sidebar}`
+			)
+			if (sidebar) {
+				const windowWidth = window.innerWidth
+				const isNarrowScreen = windowWidth < 451
+				sidebar.style.width = isNarrowScreen ? '100%' : '310px'
+			}
+		}
+
+		setSidebarWidth()
+		window.addEventListener('resize', setSidebarWidth)
+
+		return () => {
+			window.removeEventListener('resize', setSidebarWidth)
+		}
+	}, [])
+
 	return (
 		<div className={style.sidebar}>
 			<div className={style.button}>
