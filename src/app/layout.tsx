@@ -1,7 +1,11 @@
+import { PropsWithChildren, ReactNode } from 'react'
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import AppProvider from '@pages/AppProvider'
+
+import { Sidebar } from '@widgets/Sidebar'
 
 import './globals.css'
 
@@ -14,13 +18,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children
-}: Readonly<{
-	children: React.ReactNode
-}>) {
+}: Readonly<PropsWithChildren<HTMLElement>>) {
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<AppProvider>{children}</AppProvider>
+				<AppProvider>
+					<Sidebar />
+					{children}
+				</AppProvider>
 			</body>
 		</html>
 	)
