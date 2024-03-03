@@ -1,9 +1,13 @@
-import { Calendar } from '@widgets/Calendar'
+import React from 'react';
+import { TaskProvider } from '@/shared/ui/@TaskContext/TaskContext';
+import Calendar from '@/widgets/Calendar/ui/Calendar';
 
-export default function Home() {
-	return (
-		<div>
-			<Calendar />
-		</div>
-	)
-}
+const App: React.FC = () => {
+    return (
+        <TaskProvider>
+            <Calendar />
+        </TaskProvider>
+    );
+};
+
+export default App;
