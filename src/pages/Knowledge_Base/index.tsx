@@ -1,11 +1,11 @@
 import React from 'react'
 
-function index() {
+function Knowledge_Base() {
   return (
     <div>
-      
+      Knowledge_Base
     </div>
   )
 }
 
-export default index
+export default Knowledge_Base
