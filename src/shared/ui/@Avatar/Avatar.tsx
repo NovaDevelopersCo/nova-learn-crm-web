@@ -5,12 +5,12 @@ import Image from 'next/image'
 import style from './Avatar.module.scss'
 import Vector from '/public/assets/Vector.png'
 
-interface AvatarProps {
+type IAvatarProps = {
 	level: number
 	experience: number
 }
 
-const Avatar: React.FC<AvatarProps> = ({ level, experience }) => {
+const Avatar: React.FC<IAvatarProps> = ({ level, experience }) => {
 	const formattedLevel = Math.min(Math.max(level, 0), 100)
 	const formattedExperience = Math.min(Math.max(experience, 0), 100)
 

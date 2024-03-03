@@ -1,6 +1,6 @@
 'use client'
 
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useCallback, useEffect, useState } from 'react'
 
 import { Avatar, Button } from '@shared/ui'
 
@@ -22,36 +22,27 @@ import teams from '/public/icons/teams.png'
 const Sidebar: FC = () => {
 	const [isSidebarVisible, setIsSidebarVisible] = useState(true)
 
-	useEffect(() => {
-		const setSidebarWidth = () => {
-			const sidebar = document.querySelector<HTMLElement>(
-				`.${style.sidebar}`
-			)
-			if (sidebar) {
-				const windowWidth = window.innerWidth
-				const isNarrowScreen = windowWidth < 1025
-				sidebar.style.width = isNarrowScreen ? '100%' : '310px'
-				setIsSidebarVisible(!isNarrowScreen)
-			}
-		}
-
-		setSidebarWidth()
-		window.addEventListener('resize', setSidebarWidth)
-
-		return () => {
-			window.removeEventListener('resize', setSidebarWidth)
-		}
+	const handleResize = useCallback(() => {
+		const windowWidth = window.innerWidth
+		const isNarrowScreen = windowWidth < 1025
+		setIsSidebarVisible(!isNarrowScreen)
 	}, [])
 
-	const toggleSidebarVisibility = () => {
-		setIsSidebarVisible(!isSidebarVisible)
-	}
+	useEffect(() => {
+		handleResize()
+
+		window.addEventListener('resize', handleResize)
+
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [handleResize])
 
 	return (
 		<div>
 			<Button
 				className={style.toggleBtn}
-				onClick={toggleSidebarVisibility}
+				onClick={() => setIsSidebarVisible(!isSidebarVisible)}
 				label={isSidebarVisible ? 'Hide Sidebar' : 'Show Sidebar'}
 			/>
 			<div

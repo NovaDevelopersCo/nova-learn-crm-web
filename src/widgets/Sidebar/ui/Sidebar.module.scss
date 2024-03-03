@@ -13,6 +13,12 @@
 	}
 }
 
+@media screen and (max-width: 1024px) {
+	.sidebar {
+		width: 100%;
+	}
+}
+
 .sidebar.hidden {
 	transform: translateX(-100%);
 	transition: transform 0.3s ease;
