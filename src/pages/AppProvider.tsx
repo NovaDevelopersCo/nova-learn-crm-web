@@ -1,9 +1,9 @@
-import { FC, PropsWithChildren } from 'react'
+import { FC, PropsWithChildren, ReactChildren } from 'react'
 
 import { StoreProvider } from '@store/index'
 
-const AppProvider: FC<PropsWithChildren<Record<string, never>>> = ({
+const AppProvider: FC<PropsWithChildren<Partial<ReactChildren>>> = ({
 	children
-}) => /*<StoreProvider>*/{children} /*</StoreProvider>*/
+}) => <StoreProvider>{children}</StoreProvider>
 
-export default AppProvider 
+export default AppProvider
