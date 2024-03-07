@@ -1,3 +1,9 @@
-export default function Home() {
-	return <div>{/* More */}</div>
+import React from 'react'
+
+import { Calendar } from '@widgets/Calendar'
+
+const App: React.FC = () => {
+	return <Calendar />
 }
+
+export default App
