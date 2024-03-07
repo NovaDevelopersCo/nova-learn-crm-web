@@ -1,48 +1,5 @@
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	.header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 20px;
-		background-color: #f0f0f0;
-
-		.select {
-			padding: 5px;
-		}
-	}
-
-	.days {
-		display: grid;
-		grid-template-columns: repeat(7, 1fr);
-		background-color: #f0f0f0;
-		line-height: 50px;
-
-		.dayCell {
-			cursor: pointer; // Добавляем курсор при наведении для указания на возможность изменения
-		}
-	}
-
-	.inputTask {
-		display: block;
-		height: auto; /* Установите авто-высоту, чтобы текст писался в столбик */
-		width: 100%; /* Ширина элемента ввода на всю доступную область */
-		padding: 5px; /* Отступы внутри элемента ввода */
-		border-radius: 5px; /* Закругленные углы */
-		border: 1px solid #ccc; /* Стиль границы элемента ввода */
-		margin-bottom: 5px; /* Отступ снизу между элементами ввода */
-		resize: vertical; /* Разрешить вертикальное изменение размера поля ввода */
-	}
-
-	.taskInput:focus {
-		outline: none; // Убираем фокусную обводку при активации поля ввода задач
-	}
-
-	.taskMeetList {
-		border: 0px;
-	}
+.calendar {
+	border-radius: 20px;
+	background-color: white;
+	font-family: 'Roboto';
 }
