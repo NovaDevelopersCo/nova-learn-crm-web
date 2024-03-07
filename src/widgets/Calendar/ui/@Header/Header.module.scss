@@ -1,5 +1,5 @@
 .header {
-	@apply w-full flex flex-row justify-between items-center font-sans p-8;
+	@apply w-full flex flex-row justify-between items-center font-sans p-8 shadow-md;
 	.btn {
 		@apply text-center text-xs font-black leading-[20px] text-[#6b7a99] border-solid border-[#f5f6f7] shadow-[0px_2px_5px_0px_rgba(38,_51,_77,_0.03)] bg-white flex flex-row justify-center items-center px-4 py-2 cursor-pointer border-2 rounded-full;
 		&_left {

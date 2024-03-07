@@ -1,9 +1,8 @@
 'use clients'
 
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 
-// eslint-disable-next-line import/no-internal-modules
-import CalendarEvents from '@/data/Calendar.json'
+import clsx from 'clsx'
 
 import { IEvent } from '../../../model/@interfaces'
 import Event from './@Event/Event'
@@ -15,20 +14,49 @@ type TDayProps = {
 	events: IEvent[]
 }
 
-const Day: React.FC<TDayProps> = ({ dayName, dayOfMonth, events }) => {
+const Day: FC<TDayProps> = ({ dayName, dayOfMonth, events }) => {
 	const [taskCount, setTaskCount] = useState<number>(0)
 	/**
 	 * Adding task by onClick on day tape
 	 */
 	const onClickHandler = () => {}
 
+	const clocks = [
+		'09',
+		'10',
+		'11',
+		'12',
+		'13',
+		'14',
+		'15',
+		'16',
+		'17',
+		'18',
+		'19',
+		'20'
+	]
+
 	return (
-		<div className={styles.dayCell}>
-			<div className={styles.dayName}>
-				<h1>{dayName}</h1>
-				<p>{dayOfMonth}</p>
+		<div
+			className={clsx(
+				'grid grid-rows-subgrid grid-cols-subgrid row-span-full',
+				styles.container
+			)}
+		>
+			<h1 className={styles.header}>
+				{dayName} {dayOfMonth}
+			</h1>
+			{/* Time grid */}
+			<div className='grid row-span-12'>
+				{clocks.map((clock, idx) => (
+					<div
+						key={idx}
+						className='border-b border-[#F5F6F7] border-solid'
+					></div>
+				))}
 			</div>
-			<div onClick={onClickHandler}>
+			{/* Events list */}
+			<div className='absolute' onClick={onClickHandler}>
 				{events.map(event => (
 					<Event {...event} key={event.id} />
 				))}
