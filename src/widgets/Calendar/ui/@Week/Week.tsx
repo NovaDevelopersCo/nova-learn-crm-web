@@ -27,9 +27,7 @@ const clocks = [
 	'18',
 	'19',
 	'20',
-	'21',
-	'22',
-	'23'
+	'21'
 ]
 
 type TWeekProps = { date: Date; events: IEvent[] }

@@ -2,9 +2,10 @@ import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
-import AppProvider from '@pages/AppProvider'
+import AppProvider from '@app/_utils/AppProvider'
 
 import { Navbar } from '@widgets/Navbar'
+import { Sidebar } from '@widgets/Sidebar'
 
 import './globals.css'
 
@@ -27,9 +28,18 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>
-				<Navbar />
-				<AppProvider>{children}</AppProvider>
+			<body className={clsx(roboto.className, roboto.variable)}>
+				<AppProvider>
+					<div className='h-screen w-screen overflow-hidden px-16 py-8'>
+						<Navbar />
+						<div className='flex flex-row w-full h-full gap-x-6 mt-8'>
+							<Sidebar />
+							<div className='overflow-y-auto h-full w-full'>
+								{children}
+							</div>
+						</div>
+					</div>
+				</AppProvider>
 			</body>
 		</html>
 	)

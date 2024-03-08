@@ -43,14 +43,19 @@ const Navbar: React.FC = () => {
 						<Link href='/Courses'>Courses</Link>
 					</li>
 					<li className={styles.navbar__menu_item}>
-						<div className={styles.navbar__search_container}>
-							<Image src={search} alt='Search' />
+						<form
+							className={styles.navbar__search_container}
+							onSubmit={e => e.preventDefault()}
+						>
+							<button type='submit'>
+								<Image src={search} alt='Search' />
+							</button>
 							<input
 								className={styles.navbar__search}
 								type='text'
 								placeholder='Search'
 							/>
-						</div>
+						</form>
 					</li>
 				</ul>
 
