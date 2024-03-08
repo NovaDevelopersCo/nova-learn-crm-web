@@ -2,9 +2,10 @@
 
 import React, { FC, useEffect, useState } from 'react'
 
+import { Event } from '@features/Event'
+
 import { DateUtils } from '../lib/@utils'
 import { IEvent } from '../model/@interfaces'
-import Event from './../../Event/ui/Event'
 import Header from './@Header/Header'
 import Week from './@Week/Week'
 import styles from './Calendar.module.scss'
