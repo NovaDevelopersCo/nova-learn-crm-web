@@ -13,9 +13,9 @@ const Registration = () => {
 			</div>
 			<div className={style.form_container}>
 				<form action='' className={style.form}>
-					<label className={style.label}>Name</label>
+					<label className={style.label}>Full Name</label>
 					<input type='text' className={style.input} />
-					<label className={style.label}>Email</label>
+					<label className={style.label}>Email Address</label>
 					<input type='email' className={style.input} />
 					<label className={style.label}>Password</label>
 					<input type='password' className={style.input} />
