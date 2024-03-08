@@ -4,6 +4,8 @@ import { Roboto } from 'next/font/google'
 
 import AppProvider from '@pages/AppProvider'
 
+import { Navbar } from '@widgets/Navbar'
+
 import './globals.css'
 
 const roboto = Roboto({
@@ -25,7 +27,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={clsx(roboto.className, roboto.variable)}>
+			<body className={inter.className}>
+				<Navbar />
 				<AppProvider>{children}</AppProvider>
 			</body>
 		</html>
