@@ -9,4 +9,6 @@ export default function Home() {
 			<p></p>
 		</div>
 	)
-}
+
+
+export default App
