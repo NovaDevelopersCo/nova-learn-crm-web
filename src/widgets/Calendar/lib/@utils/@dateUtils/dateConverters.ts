@@ -31,7 +31,6 @@ class DateConverters {
 		return formattedDateRange
 	}
 
-	// Need tests
 	static stringSecsToDate(date: string): Date {
 		const curDate = new Date(1970, 0, 1)
 		curDate.setTime(+date)

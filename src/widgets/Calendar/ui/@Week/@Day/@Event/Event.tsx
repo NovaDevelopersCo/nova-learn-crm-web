@@ -17,7 +17,7 @@ const Event: FC<IEvent & { clocks: string[] }> = ({
 
 	return (
 		<div
-			className='absolute text-xs p-2 border border-solid rounded backdrop-opacity-50 backdrop-blur m-1'
+			className='absolute text-xs p-2 border border-solid rounded backdrop-opacity-50 backdrop-blur m-1 overflow-hidden'
 			style={{
 				borderColor: color,
 				backgroundColor: ColorUtils.hexToRGBA(color, 0.05),

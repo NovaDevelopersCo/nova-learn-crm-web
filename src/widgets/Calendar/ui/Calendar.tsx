@@ -16,11 +16,6 @@ const Calendar: FC = () => {
 	const [events, setEvents] = useState<IEvent[]>([])
 
 	useEffect(() => {
-		// const savedEvents = localStorage.getItem('events')
-		// if (savedEvents) {
-		// 	setEvents(JSON.parse(savedEvents))
-		// }
-
 		setEvents(eventsData)
 	}, [])
 
