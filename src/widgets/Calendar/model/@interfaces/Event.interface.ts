@@ -1,11 +1,12 @@
 import { Key } from 'react'
 
 interface IEvent {
-	id: Key
-	name: string
-	description: string
-	color: string
-	date: Date
+	readonly id: Key
+	readonly name: string
+	readonly description: string
+	readonly color: string
+	readonly dateStart: string
+	readonly dateEnd: string
 }
 
 export default IEvent

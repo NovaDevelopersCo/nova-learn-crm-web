@@ -2,6 +2,9 @@
 
 import React, { FC, useEffect, useState } from 'react'
 
+// eslint-disable-next-line import/no-internal-modules
+import eventsData from '@/data/Calendar.json'
+
 import { DateUtils } from '../lib/@utils'
 import { IEvent } from '../model/@interfaces'
 import Header from './@Header/Header'
@@ -17,6 +20,8 @@ const Calendar: FC = () => {
 		// if (savedEvents) {
 		// 	setEvents(JSON.parse(savedEvents))
 		// }
+
+		setEvents(eventsData)
 	}, [])
 
 	useEffect(() => {
@@ -41,7 +46,7 @@ const Calendar: FC = () => {
 				goToNext={goToNext}
 				goToPrev={goToPrev}
 			/>
-			<Week date={selectedDate} events={[]} />
+			<Week date={selectedDate} events={events} />
 		</section>
 	)
 }

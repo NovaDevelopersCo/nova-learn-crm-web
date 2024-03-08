@@ -1,6 +1,6 @@
 'use clients'
 
-import { FC, useState } from 'react'
+import { FC, useEffect } from 'react'
 
 import clsx from 'clsx'
 
@@ -12,29 +12,18 @@ type TDayProps = {
 	dayName: string
 	dayOfMonth: number
 	events: IEvent[]
+	clocks: string[]
 }
 
-const Day: FC<TDayProps> = ({ dayName, dayOfMonth, events }) => {
-	const [taskCount, setTaskCount] = useState<number>(0)
+const Day: FC<TDayProps> = ({ dayName, dayOfMonth, events, clocks }) => {
+	// useEffect(() => {
+	// 	console.log("Day ", dayName, events)
+	// }, [events])
+
 	/**
 	 * Adding task by onClick on day tape
 	 */
 	const onClickHandler = () => {}
-
-	const clocks = [
-		'09',
-		'10',
-		'11',
-		'12',
-		'13',
-		'14',
-		'15',
-		'16',
-		'17',
-		'18',
-		'19',
-		'20'
-	]
 
 	return (
 		<div
@@ -43,11 +32,14 @@ const Day: FC<TDayProps> = ({ dayName, dayOfMonth, events }) => {
 				styles.container
 			)}
 		>
-			<h1 className={styles.header}>
+			<h1 className={clsx(styles.header, 'row-start-1 row-end-2')}>
 				{dayName} {dayOfMonth}
 			</h1>
 			{/* Time grid */}
-			<div className='grid row-span-12'>
+			<div
+				className='grid grid-rows-subgrid row-start-2 col-start-1 col-end-2'
+				style={{ gridRowEnd: clocks.length + 1 }}
+			>
 				{clocks.map((clock, idx) => (
 					<div
 						key={idx}
@@ -56,9 +48,12 @@ const Day: FC<TDayProps> = ({ dayName, dayOfMonth, events }) => {
 				))}
 			</div>
 			{/* Events list */}
-			<div className='absolute' onClick={onClickHandler}>
+			<div
+				className='row-start-2 row-end-13 col-start-1 col-end-2 relative'
+				onClick={onClickHandler}
+			>
 				{events.map(event => (
-					<Event {...event} key={event.id} />
+					<Event {...event} key={event.id} clocks={clocks} />
 				))}
 			</div>
 		</div>

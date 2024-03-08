@@ -1,18 +1,18 @@
-{
-	"1709491205460": [
-		{
-			"id": "1",
-			"name": "Happy Birthday",
-			"description": "Bla-Bla-Bla",
-			"color": "#000"
-		}
-	],
-	"1709491205480": [
-		{
-			"id": "2",
-			"name": "Happy Birthday 2",
-			"description": "Bla-Bla-Bla 2",
-			"color": "#000"
-		}
-	]
-}
+[
+	{
+		"id": "1",
+		"name": "Happy Birthday",
+		"description": "Bla-Bla-Bla",
+		"color": "#29CC39",
+		"dateStart": "1709913828417",
+		"dateEnd": "1709904785764"
+	},
+	{
+		"id": "2",
+		"name": "Happy Birthday 2",
+		"description": "Bla-Bla-Bla 2",
+		"color": "#33BFFF",
+		"dateStart": "1709913828417",
+		"dateEnd": "1709904785764"
+	}
+]
