@@ -4,6 +4,7 @@ import React, { FC, useEffect, useState } from 'react'
 
 import { DateUtils } from '../lib/@utils'
 import { IEvent } from '../model/@interfaces'
+import Event from './../../Event/ui/Event'
 import Header from './@Header/Header'
 import Week from './@Week/Week'
 import styles from './Calendar.module.scss'
@@ -42,6 +43,7 @@ const Calendar: FC = () => {
 				goToPrev={goToPrev}
 			/>
 			<Week date={selectedDate} events={[]} />
+			<Event />
 		</section>
 	)
 }
