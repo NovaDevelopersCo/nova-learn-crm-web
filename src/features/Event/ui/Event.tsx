@@ -12,34 +12,29 @@ import Icon from '/public/icons/Icon.png'
 const Event = () => {
 	return (
 		<div>
-			<div className={style.label}>
-				<Button
-					icon={Icon.src}
-					label='Add Place'
-					className={style.icone}
-				/>
-				<Button
-					icon={Icon1.src}
-					label='Add Date'
-					className={style.icone}
-				/>
-				<Button
-					icon={Icon2.src}
-					label='Add Members'
-					className={style.icone}
-				/>
-				<Button
-					icon={Icon3.src}
-					label='Add Notes'
-					className={style.icone}
-				/>
-				<Button
-					icon={Icon4.src}
-					label='Add Time'
-					className={style.icone}
-				/>
-			</div>
-		</div>
+    		<div className={style.input}>
+        		<div className={style.inputWithIcon}>
+            	<input type="text" placeholder="Add Place" className={style.icone} />
+            	<img src={Icon.src} alt="Icon" className={style.inputIcon} />
+        	</div>
+        	<div className={style.inputWithIcon}>
+            	<input type="text" placeholder="Add Date" className={style.icone} />
+            	<img src={Icon1.src} alt="Icon1" className={style.inputIcon} />
+        	</div>
+        	<div className={style.inputWithIcon}>
+            	<input type="text" placeholder="Add Members" className={style.icone} />
+            	<img src={Icon2.src} alt="Icon2" className={style.inputIcon} />
+        	</div>
+        	<div className={style.inputWithIcon}>
+            	<input type="text" placeholder="Add Notes" className={style.icone} />
+            	<img src={Icon3.src} alt="Icon3" className={style.inputIcon} />
+        	</div>
+        	<div className={style.inputWithIcon}>
+            	<input type="text" placeholder="Add Time" className={style.icone} />
+            	<img src={Icon4.src} alt="Icon4" className={style.inputIcon} />
+        	</div>
+    	</div>
+	</div>
 	)
 }
 
