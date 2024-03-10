@@ -1,0 +1,18 @@
+[
+	{
+		"id": "1",
+		"name": "Happy Birthday",
+		"description": "Bla-Bla-Bla",
+		"color": "#29CC39",
+		"dateStart": "1709903828417",
+		"dateEnd": "1709913828417"
+	},
+	{
+		"id": "2",
+		"name": "Happy Birthday 2",
+		"description": "Bla-Bla-Bla 2",
+		"color": "#33BFFF",
+		"dateStart": "1709913828417",
+		"dateEnd": "1709904785764"
+	}
+]

@@ -39,7 +39,7 @@ const Sidebar: FC = () => {
 	}, [handleResize])
 
 	return (
-		<div>
+		<>
 			<Button
 				className={style.toggleBtn}
 				onClick={() => setIsSidebarVisible(!isSidebarVisible)}
@@ -112,7 +112,7 @@ const Sidebar: FC = () => {
 					/>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

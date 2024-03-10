@@ -1,10 +1,13 @@
 .sidebar {
 	display: flex;
 	flex-direction: column;
-	background-color: #f7f8fa;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0);
 	color: #adb8cc;
-	width: 310px;
-	height: 961px;
+	width: min-content;
+	overflow-y: auto;
+	overflow-x: show;
+	padding-right: 24px;
 }
 
 @media (max-width: 1024px) {
@@ -47,7 +50,9 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	width: 100%;
 	margin: 10px;
+	// padding-right: 24px;
 }
 
 .button :hover {
@@ -77,11 +82,10 @@
 }
 
 .clusterbtn {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	justify-items: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	margin-top: 75px;
+	max-width: 100%;
 }
 
 .clusterbtn :hover {
