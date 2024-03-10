@@ -1,12 +1,13 @@
-import { Registrationwid } from '@widgets/Registrationwid'
 import React from 'react'
 
+import { Registrationwid } from '@widgets/Registrationwid'
+
 const Registration = () => {
-  return (
-    <>
-      <Registrationwid/>
-    </>
-  )
+	return (
+		<>
+			<Registrationwid />
+		</>
+	)
 }
 
 export default Registration

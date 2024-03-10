@@ -1,5 +1,3 @@
-import Registrationwid from "./ui/Registrationwid";
+import Registrationwid from './ui/Registrationwid'
 
-export {
-    Registrationwid
-}
+export { Registrationwid }

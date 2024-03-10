@@ -14,7 +14,7 @@
 .reg_title h2 {
 	font-size: 24px;
 	margin-bottom: 10px;
-    color: #020817;
+	color: #020817;
 }
 
 .reg_title p {
@@ -29,7 +29,7 @@
 .form {
 	display: grid;
 	grid-row-gap: 10px;
-    color: #020817;
+	color: #020817;
 }
 
 .label {
@@ -50,20 +50,20 @@
 }
 
 .show_hide_password {
-    position: relative;
-  }
-  
-  .show_hide_button {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #666;
-    font-size: 14px;
-  }
+	position: relative;
+}
+
+.show_hide_button {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: #666;
+	font-size: 14px;
+}
 
 .checkbox {
 	margin-right: 10px;
@@ -77,20 +77,20 @@
 }
 
 .btnregdiv {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .btnreg {
 	width: 500px;
-    height: 30px;
-    border-radius: 5px;
-    margin-top: 16px;
-    background-color: #0F172A;
-    color: #F8FAFC;
+	height: 30px;
+	border-radius: 5px;
+	margin-top: 16px;
+	background-color: #0f172a;
+	color: #f8fafc;
 
-    &:hover {
-        background-color: #293349;
-        color: #ebe8e8;
-    }
+	&:hover {
+		background-color: #293349;
+		color: #ebe8e8;
+	}
 }
