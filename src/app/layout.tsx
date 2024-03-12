@@ -1,10 +1,10 @@
-import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
 import AppProvider from '@pages/AppProvider'
 
 import { Navbar } from '@widgets/Navbar'
+import { Sidebar } from '@widgets/Sidebar'
 
 import './globals.css'
 
@@ -28,15 +28,13 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-<<<<<<<<< Temporary merge branch 1
 				<AppProvider>
 					<Sidebar />
 					{children}
 				</AppProvider>
-=========
+
 				<Navbar />
 				<AppProvider>{children}</AppProvider>
->>>>>>>>> Temporary merge branch 2
 			</body>
 		</html>
 	)
