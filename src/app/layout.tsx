@@ -5,6 +5,9 @@ import { Inter } from 'next/font/google'
 
 import AppProvider from '@pages/AppProvider'
 
+import { Navbar } from '@widgets/Navbar'
+import { Sidebar } from '@widgets/Sidebar'
+
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
