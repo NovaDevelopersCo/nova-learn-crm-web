@@ -1,0 +1,143 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	background-color: #f7f8fa;
+	color: #adb8cc;
+	width: 310px;
+	height: 961px;
+}
+
+@media (max-width: 1024px) {
+	.sidebar {
+		transform: translateX(-100%);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.sidebar {
+		width: 100%;
+	}
+}
+
+.sidebar.hidden {
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+
+.sidebar.visible {
+	transform: translateX(0%);
+	transition: transform 0.3s ease;
+}
+
+.toggleBtn {
+	width: 130px;
+	background-color: #adb8cc;
+	color: #f7f8fa;
+	position: absolute;
+	z-index: 10;
+}
+
+@media (min-width: 1024px) {
+	.toggleBtn {
+		display: none;
+	}
+}
+
+.button {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px;
+}
+
+.button :hover {
+	background-color: #e6e6e6;
+	border-radius: 5px;
+}
+
+.customButton {
+	background-color: #f7f8fa;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	align-items: center;
+}
+
+.customButton :hover {
+	background-color: #e6e6e6;
+	border-radius: 0;
+}
+
+.avatar {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.clusterbtn {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-items: center;
+	margin-top: 75px;
+}
+
+.clusterbtn :hover {
+	border-radius: 12px;
+	background-color: #ffffff;
+	transform: scale(1.3);
+	position: relative;
+	z-index: 1;
+	color: #6b7a99;
+}
+
+.customcluster {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	width: 120px;
+	height: 120px;
+	background-color: #f7f8fa;
+	border: 2px solid;
+	border-color: #edeff2;
+	transition: all 0.2s ease;
+	line-height: 40px;
+}
+
+.customcluster :hover {
+	border-radius: 0;
+	background-color: #ffffff;
+	transform: none;
+}
+
+.twobuton {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	justify-items: center;
+	align-items: center;
+	transition: transform 0.3s ease;
+}
+
+.twobuton :hover {
+	transform: translateX(5px);
+	color: #6b7a99;
+}
+
+.twobtn {
+	display: flex;
+	width: 190px;
+	background-color: #f7f8fa;
+	justify-content: space-between;
+	justify-items: center;
+	align-items: center;
+	margin-top: 15px;
+	transition: transform 0.3s ease;
+}
+
+.twobtn :hover {
+	transform: none;
+}
