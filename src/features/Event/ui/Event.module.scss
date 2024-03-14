@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	padding: 20px; /* Отступы внутри квадрата */
 	border-width: 160px;
 }
@@ -11,7 +10,13 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px; /* Пространство между элементами внутри контейнера */
-	width: 100%;
+	width: 20%;
+}
+
+.eventTitle {
+    font-weight: bold; /* Жирный шрифт */
+    margin-bottom: 230px; /* Отступ снизу */
+	color: #7d8fb3;
 }
 
 .inputWithIcon {
@@ -45,4 +50,8 @@
 .icone:focus {
 	outline: none; /* Убираем контур фокуса */
 	border-color: #ccc; /* Цвет границы при фокусе */
+}
+
+.colorSelectorTrigger{
+	margin-bottom: 230px;
 }
