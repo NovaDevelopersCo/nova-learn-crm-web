@@ -2,8 +2,6 @@ import React from 'react'
 
 import { Calendar } from '@widgets/Calendar'
 
-const App: React.FC = () => {
+export default function Home() {
 	return <Calendar />
 }
-
-export default App

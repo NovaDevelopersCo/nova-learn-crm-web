@@ -4,6 +4,9 @@ import React, { FC, useEffect, useState } from 'react'
 
 import { Event } from '@features/Event'
 
+import eventsData from '@/data/Calendar.json'
+
+
 import { DateUtils } from '../lib/@utils'
 import { IEvent } from '../model/@interfaces'
 import Header from './@Header/Header'
@@ -15,10 +18,7 @@ const Calendar: FC = () => {
 	const [events, setEvents] = useState<IEvent[]>([])
 
 	useEffect(() => {
-		// const savedEvents = localStorage.getItem('events')
-		// if (savedEvents) {
-		// 	setEvents(JSON.parse(savedEvents))
-		// }
+		setEvents(eventsData)
 	}, [])
 
 	useEffect(() => {
@@ -43,8 +43,8 @@ const Calendar: FC = () => {
 				goToNext={goToNext}
 				goToPrev={goToPrev}
 			/>
-			<Week date={selectedDate} events={[]} />
 			<Event />
+			<Week date={selectedDate} events={events} />
 		</section>
 	)
 }

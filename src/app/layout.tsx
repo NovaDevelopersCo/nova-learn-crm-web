@@ -1,15 +1,20 @@
-import { PropsWithChildren, ReactNode } from 'react'
-
+import clsx from 'clsx'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-import AppProvider from '@pages/AppProvider'
+import AppProvider from '@app/_utils/AppProvider'
 
+import { Navbar } from '@widgets/Navbar'
 import { Sidebar } from '@widgets/Sidebar'
 
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+	subsets: ['latin'],
+	weight: ['100', '300', '400', '500', '700', '900'],
+	style: 'normal',
+	variable: '--roboto'
+})
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -18,13 +23,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children
-}: Readonly<PropsWithChildren<HTMLElement>>) {
+}: Readonly<{
+	children: React.ReactNode
+}>) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>
+			<body className={clsx(roboto.className, roboto.variable)}>
 				<AppProvider>
-					<Sidebar />
-					{children}
+					<div className='h-screen w-screen overflow-hidden px-16 py-8'>
+						<Navbar />
+						<div className='flex flex-row w-full h-full gap-x-6 mt-8'>
+							<Sidebar />
+							<div className='overflow-y-auto h-full w-full'>
+								{children}
+							</div>
+						</div>
+					</div>
 				</AppProvider>
 			</body>
 		</html>

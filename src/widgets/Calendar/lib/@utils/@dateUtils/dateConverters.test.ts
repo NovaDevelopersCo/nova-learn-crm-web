@@ -9,4 +9,11 @@ describe('DateConverters', () => {
 			)
 		})
 	})
+	describe('stringSecsToDate', () => {
+		test('No description', () => {
+			const expect1 = new Date()
+			const string1 = `${expect1.getTime()}`
+			expect(DateConverters.stringSecsToDate(string1)).toEqual(expect1)
+		})
+	})
 })
