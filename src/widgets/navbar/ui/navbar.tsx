@@ -34,7 +34,10 @@ const Navbar: React.FC = () => {
 						<Link href='/Materials'>Materials</Link>
 					</li>
 					<li className={styles.navbar__menu_item}>
-						<Link href='/News'>News</Link>
+						<Link href='/credentials'>Credentials</Link>
+					</li>
+					<li className={styles.navbar__menu_item}>
+						<Link href='/news'>News</Link>
 					</li>
 					<li className={styles.navbar__menu_item}>
 						<Link href='/Projects'>Projects</Link>
