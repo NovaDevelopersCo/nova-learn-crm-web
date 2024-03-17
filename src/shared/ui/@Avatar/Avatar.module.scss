@@ -1,6 +1,7 @@
 .avatarContainer {
 	position: relative;
 	display: inline-block;
+	margin-left: 18px;
 }
 
 .avatarWrapper {
@@ -27,6 +28,7 @@
 
 .levelBarContainer {
 	text-align: right;
+	margin-left: 18px;
 }
 
 .levelBar {
@@ -35,6 +37,7 @@
 	height: 10px;
 	border-radius: 50px;
 	margin-top: 5px;
+	margin-left: 18px;
 	right: 6px;
 	background-color: #0572d8;
 }
@@ -51,6 +54,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-left: 18px;
 	font-size: 12px;
 	font-weight: bold;
 	color: white;
@@ -67,11 +71,13 @@
 
 .user_profile h2 {
 	margin-top: 25px;
+	margin-left: 18px;
 	color: #83868a;
 	font-weight: 600;
 }
 
 .user_profile h3 {
 	margin-top: 15px;
+	margin-left: 18px;
 	font-weight: 450;
 }
