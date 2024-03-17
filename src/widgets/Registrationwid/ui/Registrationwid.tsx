@@ -6,50 +6,54 @@ import style from './Registrationwid.module.scss'
 
 const Registrationwid = () => {
 	const [passwordVisible, setPasswordVisible] = useState(false)
-	const [fullName, setFullName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [agreedToTerms, setAgreedToTerms] = useState(false);
+	const [fullName, setFullName] = useState('')
+	const [email, setEmail] = useState('')
+	const [password, setPassword] = useState('')
+	const [phoneNumber, setPhoneNumber] = useState('')
+	const [agreedToTerms, setAgreedToTerms] = useState(false)
 
 	const togglePasswordVisibility = () => {
 		setPasswordVisible(!passwordVisible)
 	}
 
-	const handleInputChange = (event: { target: { name: any; value: any; type: any; checked: any } }) => {
-		const { name, value, type, checked } = event.target;
-		const newValue = type === 'checkbox' ? checked : value;
+	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value, type, checked } = event.target
+		const newValue = type === 'checkbox' ? checked.toString() : value
 		switch (name) {
 			case 'fullName':
-				setFullName(newValue);
-				break;
+				setFullName(newValue)
+				break
 			case 'email':
-				setEmail(newValue);
-				break;
+				setEmail(newValue)
+				break
 			case 'password':
-				setPassword(newValue);
-				break;
+				setPassword(newValue)
+				break
 			case 'phoneNumber':
-				setPhoneNumber(newValue);
-				break;
+				setPhoneNumber(newValue)
+				break
 			case 'agreedToTerms':
-				setAgreedToTerms(newValue);
-				break;
+				setAgreedToTerms(
+					typeof newValue === 'string'
+						? newValue === 'true'
+						: newValue
+				)
+				break
 			default:
-				break;
+				break
 		}
 	}
 
 	const handleSubmit = () => {
-        const formData = {
-            fullName: fullName,
-            email: email,
-            password: password,
-            phoneNumber: phoneNumber,
-            agreedToTerms: agreedToTerms
-        };
-        console.log(formData);
-    }
+		const formData = {
+			fullName: fullName,
+			email: email,
+			password: password,
+			phoneNumber: phoneNumber,
+			agreedToTerms: agreedToTerms
+		}
+		console.log(formData)
+	}
 
 	return (
 		<div className={style.registration}>
@@ -60,16 +64,28 @@ const Registrationwid = () => {
 			<div className={style.form_container}>
 				<form action='' className={style.form}>
 					<label className={style.label}>Full Name</label>
-					<input type='text' name='fullName' className={style.input} value={fullName} onChange={handleInputChange} />
+					<input
+						type='text'
+						name='fullName'
+						className={style.input}
+						value={fullName}
+						onChange={handleInputChange}
+					/>
 					<label className={style.label}>Email Address</label>
-					<input type='email' name='email' className={style.input} value={email} onChange={handleInputChange} />
+					<input
+						type='email'
+						name='email'
+						className={style.input}
+						value={email}
+						onChange={handleInputChange}
+					/>
 					<label className={style.label}>Password</label>
 					<div className={style.show_hide_password}>
 						<input
 							type={passwordVisible ? 'text' : 'password'}
 							name='password'
 							className={style.input}
-							value={password} 
+							value={password}
 							onChange={handleInputChange}
 						/>
 						<button
@@ -81,7 +97,13 @@ const Registrationwid = () => {
 						</button>
 					</div>
 					<label className={style.label}>Phone Number</label>
-					<input type='phone' name='phoneNumber' className={style.input} value={phoneNumber} onChange={handleInputChange} />
+					<input
+						type='phone'
+						name='phoneNumber'
+						className={style.input}
+						value={phoneNumber}
+						onChange={handleInputChange}
+					/>
 					<label
 						htmlFor='privacyCheckbox'
 						className={style.checkbox_label}
