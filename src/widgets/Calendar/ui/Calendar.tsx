@@ -2,10 +2,10 @@
 
 import React, { FC, useEffect, useState } from 'react'
 
-import { Event } from '@features/Event'
-
+// eslint-disable-next-line import/no-internal-modules
 import eventsData from '@/data/Calendar.json'
 
+import { Event } from '@features/Event'
 
 import { DateUtils } from '../lib/@utils'
 import { IEvent } from '../model/@interfaces'
