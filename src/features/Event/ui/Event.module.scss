@@ -32,12 +32,12 @@
 }
 
 .icone {
-	padding-left: 30px; /* Отступ текстового поля для учета иконки */
+	padding-left: 50px; /* Отступ текстового поля для учета иконки */
 	width: 100%;
 	height: 40px; /* Высота поля ввода */
 	border-radius: 5px; /* Округление углов */
 	border: 2px solid #fff; /* Граница поля ввода */
-	font-size: 16px; /* Размер шрифта */
+	font-size: 12px; /* Размер шрифта */
 	background-color: #fff; /* Цвет фона поля ввода */
 	color: #7d8fb3; /* Цвет текста */
 	box-sizing: border-box;
@@ -56,7 +56,7 @@
 .colorSelectorContainer {
 	position: absolute;
 	top: 30px;
-	right: 350px; /* Отступ справа */
+	right: 460px; /* Отступ справа */
 	/* Измените right на любое другое значение, чтобы переместить селектор цветов по горизонтали */
 }
 
@@ -82,7 +82,7 @@
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	position: absolute;
-	left: 45px;
+	left: 30px;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -112,11 +112,20 @@
 	gap: 10px; /* Пространство между цветами */
 }
 
-.inputContainer .inputWithIcon:not(:last-child) {
-	border-bottom: 1px solid #ccc; /* Тонкая линия между строками */
+.inputWithIconAddTime{
+	margin-bottom: 52px;
+	margin-left: 10px;
 }
 
-@media only screen and (max-width: 768px) {
+.inputContainer .inputWithIcon:not(:last-child) {
+	border-bottom: 1px solid #000000; /* Тонкая линия между строками */
+}
+
+.inputWithIcon:nth-child(4) {
+    border-bottom: 1px solid #000000; /* Тонкая линия между строками */
+}
+
+@media only screen and (max-width: 800px) {
 	.colorSelectorContainer {
 		right: 10px; /* Изменяем правый отступ для адаптации под планшеты */
 	}

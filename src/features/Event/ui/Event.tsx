@@ -132,7 +132,7 @@ const Event = () => {
 				</div>
 			</div>
 			<div
-				className={style.inputWithIcon}
+				className={style.inputWithIconAddTime}
 				style={{ marginLeft: '-10px' }}
 			>
 				<input
