@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
 						<Link href='/Projects'>Projects</Link>
 					</li>
 					<li className={styles.navbar__menu_item}>
-						<Link href='/Courses'>Courses</Link>
+						<Link href='/cources'>Cources</Link>
 					</li>
 					<li className={styles.navbar__menu_item}>
 						<form
