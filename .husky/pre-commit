@@ -1,0 +1,3 @@
+pnpm pretty
+pnpm lint
+pnpm test
