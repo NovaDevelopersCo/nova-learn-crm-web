@@ -1,15 +1,16 @@
 'use client'
+/* eslint-disable import/no-internal-modules */
 
 import React, { useState } from 'react'
 
-import human from 'icons/human.png'
-import mappin from 'icons/mappin.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import styles from './navbar.module.scss'
-import menu from '/icons/menu.png'
-import search from '/icons/search.png'
+import styles from './Navbar.module.scss'
+import human from '@/../public/icons/human.png'
+import mappin from '@/../public/icons/mappin.png'
+import menu from '@/../public/icons/menu.png'
+import search from '@/../public/icons/search.png'
 
 const Navbar: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
