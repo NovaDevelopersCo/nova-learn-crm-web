@@ -3,9 +3,6 @@
 
 import React, { FC, useCallback, useEffect, useState } from 'react'
 
-import { Avatar, Button } from '@shared/ui'
-
-import style from './Sidebar.module.scss'
 import calendars from '@/../public/icons/calendars.png'
 import dash from '@/../public/icons/dash.png'
 import dot from '@/../public/icons/dot.png'
@@ -19,6 +16,12 @@ import people from '@/../public/icons/people.png'
 import rightIcon from '@/../public/icons/rightIcon.png'
 import settings from '@/../public/icons/settings.png'
 import teams from '@/../public/icons/teams.png'
+
+import { Avatar, Button } from '@shared/ui'
+
+import style from './Sidebar.module.scss'
+
+/* eslint-disable import/no-internal-modules */
 
 const Sidebar: FC = () => {
 	const [isSidebarVisible, setIsSidebarVisible] = useState(true)
