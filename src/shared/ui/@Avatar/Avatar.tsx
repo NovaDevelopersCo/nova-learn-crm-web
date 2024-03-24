@@ -3,14 +3,14 @@ import React from 'react'
 import Image from 'next/image'
 
 import style from './Avatar.module.scss'
-import Vector from '/public/assets/Vector.png'
 
 type IAvatarProps = {
 	level: number
 	experience: number
+	image: string
 }
 
-const Avatar: React.FC<IAvatarProps> = ({ level, experience }) => {
+const Avatar: React.FC<IAvatarProps> = ({ level, experience, image }) => {
 	const formattedLevel = Math.min(Math.max(level, 0), 100)
 	const formattedExperience = Math.min(Math.max(experience, 0), 100)
 
@@ -20,7 +20,7 @@ const Avatar: React.FC<IAvatarProps> = ({ level, experience }) => {
 				<div className={style.avatarWrapper}>
 					<div className={style.avatar}>
 						<Image
-							src={Vector}
+							src={image}
 							alt='avatar'
 							className={`${style.img} ${style.avatar_image}`}
 						/>

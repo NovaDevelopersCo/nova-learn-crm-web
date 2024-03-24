@@ -5,19 +5,19 @@ import React, { FC, useCallback, useEffect, useState } from 'react'
 import { Avatar, Button } from '@shared/ui'
 
 import style from './Sidebar.module.scss'
-import calendars from '/public/icons/calendars.png'
-import dash from '/public/icons/dash.png'
-import dot from '/public/icons/dot.png'
-import events from '/public/icons/events.png'
-import feedback from '/public/icons/feedback.png'
-import files from '/public/icons/files.png'
-import invoice from '/public/icons/invoice.png'
-import knowledge from '/public/icons/knowledge.png'
-import massage from '/public/icons/massage.png'
-import people from '/public/icons/people.png'
-import rightIcon from '/public/icons/rightIcon.png'
-import settings from '/public/icons/settings.png'
-import teams from '/public/icons/teams.png'
+import calendars from '/icons/calendars.png'
+import dash from '/icons/dash.png'
+import dot from '/icons/dot.png'
+import events from '/icons/events.png'
+import feedback from '/icons/feedback.png'
+import files from '/icons/files.png'
+import invoice from '/icons/invoice.png'
+import knowledge from '/icons/knowledge.png'
+import massage from '/icons/massage.png'
+import people from '/icons/people.png'
+import rightIcon from '/icons/rightIcon.png'
+import settings from '/icons/settings.png'
+import teams from '/icons/teams.png'
 
 const Sidebar: FC = () => {
 	const [isSidebarVisible, setIsSidebarVisible] = useState(true)
@@ -30,7 +30,6 @@ const Sidebar: FC = () => {
 
 	useEffect(() => {
 		handleResize()
-
 		window.addEventListener('resize', handleResize)
 
 		return () => {
@@ -53,7 +52,7 @@ const Sidebar: FC = () => {
 					<Button icon={dot.src} className={style.customButton} />
 				</div>
 				<div className={style.avatar}>
-					<Avatar level={5} experience={100} />
+					<Avatar level={5} experience={100} image={''} />
 				</div>
 				<div className={style.clusterbtn}>
 					<Button
